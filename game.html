@@ -1,0 +1,198 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Memory Game</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="./game-styles.css">
+</head>
+<body>
+  <!-- <embed loop="true" src="./palette.mp3" hidden="true" type="video/quicktime"></embed> -->
+  <!-- <audio autoplay="autoplay" loop="true">
+     <source src="./palette.mp3" />
+  </audio> -->
+  <!-- </object> -->
+
+
+  <section class="memory-banner">
+    <img src="http://pngimg.com/uploads/pokemon_logo/pokemon_logo_PNG6.png" alt="logo"/>
+    <div class="score">
+      <p id="memory-score">
+        0
+      </p>
+      <p id="time">
+        倒计时 00:00
+        <p id="plusTime">+5</p>
+      </p>
+      <span id="bestRecord">
+
+      </span>
+      <button id="restart" onclick="initGame()">重启游戏 </button>
+    </div>
+    <div class="user">
+      <input id="username" type="text" placeholder="输入姓名" name="user" autocomplete="off" />
+      <button id="nameButton" type="submit" onclick="submitName()">参加</button>
+    </div>
+  </section>
+  <!-- <section class="game-cover">
+  </section> -->
+  <section class="memory-game">
+    <!-- <div class="game-cover"><button id="start" onclick="removeCover()">Start</button></div> -->
+    <div class="memory-card" data-framework="Blastoise">
+      <img class="front-face" src="img/game/Blastoise.png" alt="Blastoise">
+      <img class="back-face" src="img/game/Pokeball.png" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-framework="Charizard">
+      <img class="front-face" src="img/game/Charizard.png" alt="Charizard">
+      <img class="back-face" src="img/game/Pokeball.png" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-framework="Jigglypuff">
+      <img class="front-face" src="img/game/Jigglypuff.png" alt="Jigglypuff">
+      <img class="back-face" src="img/game/Pokeball.png" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-framework="Blastoise">
+      <img class="front-face" src="img/game/Blastoise.png" alt="Blastoise">
+      <img class="back-face" src="img/game/Pokeball.png" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-framework="Charizard">
+      <img class="front-face" src="img/game/Charizard.png" alt="Charizard">
+      <img class="back-face" src="img/game/Pokeball.png" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-framework="Jigglypuff">
+      <img class="front-face" src="img/game/Jigglypuff.png" alt="Jigglypuff">
+      <img class="back-face" src="img/game/Pokeball.png" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-framework="electrode">
+      <img class="front-face" src="img/game/Electrode.png" alt="Electrode">
+      <img class="back-face" src="img/game/Pokeball.png" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-framework="voltorb">
+      <img class="front-face" src="img/game/Voltorb.png" alt="Voltorb">
+      <img class="back-face" src="img/game/Pokeball.png" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-framework="electrode">
+      <img class="front-face" src="img/game/Electrode.png" alt="Electrode">
+      <img class="back-face" src="img/game/Pokeball.png" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-framework="voltorb">
+      <img class="front-face" src="img/game/Voltorb.png" alt="Voltorb">
+      <img class="back-face" src="img/game/Pokeball.png" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-framework="redGyarados">
+      <img class="front-face" src="img/game/RedGyarados.png" alt="RedGyarados">
+      <img class="back-face" src="img/game/Pokeball.png" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-framework="redGyarados">
+      <img class="front-face" src="img/game/RedGyarados.png" alt="RedGyarados">
+      <img class="back-face" src="img/game/Pokeball.png" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-framework="raichu">
+      <img class="front-face" src="img/game/Raichu.png" alt="Raichu">
+      <img class="back-face" src="img/game/Pokeball.png" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-framework="raichu">
+      <img class="front-face" src="img/game/Raichu.png" alt="Raichu">
+      <img class="back-face" src="img/game/Pokeball.png" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-framework="pikachu">
+      <img class="front-face" src="img/game/Pikachu.png" alt="Pikachu">
+      <img class="back-face" src="img/game/Pokeball.png" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-framework="squirtle">
+      <img class="front-face" src="img/game/Squirtle.png" alt="Squirtle">
+      <img class="back-face" src="img/game/Pokeball.png" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-framework="bulbasaur">
+      <img class="front-face" src="img/game/Bulbasaur.png" alt="Bulbasaur">
+      <img class="back-face" src="img/game/Pokeball.png" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-framework="charmander">
+      <img class="front-face" src="img/game/Charmander.png" alt="Charmander">
+      <img class="back-face" src="img/game/Pokeball.png" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-framework="pikachu">
+      <img class="front-face" src="img/game/Pikachu.png" alt="Pikachu">
+      <img class="back-face" src="img/game/Pokeball.png" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-framework="squirtle">
+      <img class="front-face" src="img/game/Squirtle.png" alt="Squirtle">
+      <img class="back-face" src="img/game/Pokeball.png" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-framework="bulbasaur">
+      <img class="front-face" src="img/game/Bulbasaur.png" alt="Bulbasaur">
+      <img class="back-face" src="img/game/Pokeball.png" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-framework="charmander">
+      <img class="front-face" src="img/game/Charmander.png" alt="Charmander">
+      <img class="back-face" src="img/game/Pokeball.png" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-framework="gyarados">
+      <img class="front-face" src="img/game/Gyarados.png" alt="Gyarados">
+      <img class="back-face" src="img/game/Pokeball.png" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-framework="gyarados">
+      <img class="front-face" src="img/game/Gyarados.png" alt="Gyarados">
+      <img class="back-face" src="img/game/Pokeball.png" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-framework="venusaur">
+      <img class="front-face" src="img/game/Venusaur.png" alt="Venusaur">
+      <img class="back-face" src="img/game/Pokeball.png" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-framework="psyduck">
+      <img class="front-face" src="img/game/Psyduck.png" alt="Psyduck">
+      <img class="back-face" src="img/game/Pokeball.png" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-framework="venusaur">
+      <img class="front-face" src="img/game/Venusaur.png" alt="Venusaur">
+      <img class="back-face" src="img/game/Pokeball.png" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-framework="psyduck">
+      <img class="front-face" src="img/game/Psyduck.png" alt="Psyduck">
+      <img class="back-face" src="img/game/Pokeball.png" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-framework="onix">
+      <img class="front-face" src="img/game/Onix.png" alt="Onix">
+      <img class="back-face" src="img/game/Pokeball.png" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-framework="onix">
+      <img class="front-face" src="img/game/Onix.png" alt="Onix">
+      <img class="back-face" src="img/game/Pokeball.png" alt="Memory Card">
+    </div>
+  </section>
+
+
+  <script src="./game-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,431 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosansscsliced.css);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  flex-direction:column;
+  /* background-color: gray; */
+  background: #FFAFBD;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffc3a0, #FFAFBD);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffc3a0, #FFAFBD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+/* game board container */
+
+.memory-game{
+  /* flex-grow: .5; */
+  display:flex;
+  width:750px;
+  height:600px;
+  margin:0 auto;
+  padding-left:60px;
+  padding-top:50px;
+  flex-wrap:wrap;
+  /* adding perspective for the rotation effect */
+  perspective: 1000px;
+  /* background-color: blue; */
+  /* border:3px solid red;
+  border-radius: 5%; */
+}
+
+/* .game-cover{
+  width:690px;
+  height:550px;
+  background: #ECE9E6;
+  background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);
+  background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+  margin:0 auto;
+  position: absolute;
+  border-radius: 5px;
+  z-index:99;
+}
+
+#start{
+  position: relative;
+  top:50%;
+  left:45%;
+  padding: 12px 20px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #D66D75;
+  border: none;
+  border-radius: 15px;
+  font-family: 'Noto Sans SC Sliced', sans-serif;
+  box-shadow: 0 9px #e35d5b;
+}
+
+#start:active{
+  background-color: #FF416C;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+} */
+
+.hide{
+  display:none;
+}
+.show{
+  display:inline-block;
+}
+
+.memory-banner{
+  width:100%;
+  height:160px;
+  margin:auto;
+  /* background-color: red; */
+  /* padding-left:10px; */
+  padding-top:30px;
+}
+
+.memory-banner img{
+  display:flex;
+  margin:auto;
+}
+
+.memory-banner .score{
+  display: flex;
+  width:100px;
+  height:100px;
+  /* background-color: blue; */
+  position:absolute;
+  bottom:20px;
+  left:20px
+  margin:0 auto;
+}
+
+#memory-score{
+  font-family: 'Open Sans', sans-serif;
+  width:100px;
+  height:100px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 90px;
+  z-index: 1;
+  border:5px solid white;
+  color:white;
+  font-weight: 700;
+  font-size: 40px;
+  position:absolute;
+  float:right;
+  bottom:0px;
+  left:50px;
+  background: #FFAFBD;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffc3a0, #FFAFBD);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffc3a0, #FFAFBD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#time{
+  width:200px;
+  font-family: 'Open Sans', sans-serif;
+  color:white;
+  font-size:30px;
+  position:absolute;
+  bottom:600px;
+  left:50px;
+  font-family: 'Noto Sans SC Sliced', sans-serif;
+}
+#plusTime{
+  font-family: 'Noto Sans SC Sliced', sans-serif;
+  font-size:25px;
+  color: #11998e;  /* fallback for old browsers */
+  font-weight:700;
+  position: absolute;
+  right:-160px;
+  bottom: 603px;
+  visibility:hidden;
+}
+
+#bestRecord{
+  font-family: 'Open Sans', sans-serif;
+  color:white;
+  font-size:25px;
+  position:fixed;
+  bottom:550px;
+  right:50px;
+  white-space: pre;
+  text-align: right;
+  font-family: 'Noto Sans SC Sliced', sans-serif;
+}
+
+.user{
+  /* background-color: blue; */
+  width:400px;
+  height:40px;
+  display: block;
+  position:fixed;
+  bottom:650px;
+  right:-80px;
+}
+
+#username{
+  margin: 0;
+  padding-bottom:5px;
+  width: 200px;
+  height:55px;
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 20px;
+  font-family: 'Noto Sans SC Sliced', sans-serif;
+  text-indent: 10px;
+}
+
+#username:focus {
+  outline: none;
+  box-shadow: 0rem 0.8rem 1.6rem #e35d5b;
+}
+
+#nameButton{
+  padding: 12px 20px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #D66D75;
+  border: none;
+  border-radius: 15px;
+  /* box-shadow: 0 9px #999; */
+  font-family: 'Noto Sans SC Sliced', sans-serif;
+  box-shadow: 0 9px #e35d5b;
+}
+
+#nameButton:active{
+  background-color: #FF416C;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#restart{
+  position:fixed;
+  bottom:50px;
+  right:50px;
+  /*  */
+  padding: 12px 20px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #D66D75;
+  border: none;
+  border-radius: 15px;
+  /* box-shadow: 0 9px #999; */
+  font-family: 'Noto Sans SC Sliced', sans-serif;
+  box-shadow: 0 9px #e35d5b;
+}
+
+#restart:active{
+  background-color: #FF416C;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* memory card style */
+.memory-card{
+  width:15%;
+  /* height:15%; */
+  margin:5px;
+  position:relative;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  /* adding preserve-3d for the rotation */
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .2s;
+  background-color: rgba(255, 255, 255, .6);
+  border-radius: 10%;
+}
+
+.memory-card img {
+  width:100%;
+  position:absolute;
+  border-radius:5px;
+  padding:20px;
+  backface-visibility: hidden;
+}
+
+.front-face{
+  transform:rotateY(180deg);
+}
+
+/* rotation effect */
+.memory-card.flip{
+  transform:rotateY(180deg);
+}
+
+/* hover effect */
+@keyframes shake {
+  0% { transform: translate(1px, 1px)}
+  10% { transform: translate(-1px, -2px) }
+  20% { transform: translate(-3px, 0px) }
+  30% { transform: translate(3px, 2px) }
+  40% { transform: translate(1px, -1px) }
+  50% { transform: translate(-1px, 2px) }
+  60% { transform: translate(-3px, 1px) }
+  70% { transform: translate(3px, 1px) }
+  80% { transform: translate(-1px, -1px) }
+  90% { transform: translate(1px, 2px) }
+  100% { transform: translate(1px, -2px) }
+}
+
+.memory-card:hover{
+  /* transform: scale(0.95); */
+  transition: transform .1s;
+  background-color: rgba(255, 255, 255, .8);
+}
+
+/* card clicking effect */
+
+.memory-card:active{
+  transform: scale(0.92);
+  transition: transform .2s;
+}
+
+/* @media only screen and (max-width:532px){
+  .memory-game{
+    width:90%;
+    height:80%;
+    background-color: blue;
+  }
+  .memory-card{
+    width:20%;
+  }
+
+} */
+
+@media only screen and (max-width:880px){
+  .memory-game{
+    width:100%;
+    height:80%;
+    /* background-color: red; */
+  }
+  .memory-card{
+    width:15%;
+  }
+  .memory-card img {
+    width:100%;
+  }
+  .memory-banner img{
+    display:flex;
+    margin:auto;
+    width:20%;
+    height:auto;
+  }
+  .memory-banner{
+    width:auto;
+    height:15%;
+    margin:auto;
+    /* background-color: red; */
+    flex-wrap: wrap;
+  }
+  #memory-score{
+    width:50%;
+    height:50%;
+    line-height: 40px;
+    font-size:30px;
+  }
+  #bestRecord{
+    font-size:18px;
+    bottom:620px;
+  }
+  #restart{
+    width:80px;
+    height:40px;
+    font-size: 14px;
+    top:5px;
+    left:50px;
+  }
+  #nameButton{
+    width:80px;
+    height:35px;
+    font-size: 14px;
+    position:fixed;
+    top:5px;
+    right:40px;
+  }
+  #username{
+    width:120px;
+    height:40px;
+    font-size: 14px;
+    position:fixed;
+    top:05px;
+    right:120px;
+  }
+  #plusTime{
+    font-size:20px;
+    left:230px;
+    top:-535px;
+  }
+}
+
+@media only screen and (max-width:650px){
+  .memory-game{
+    width:100%;
+    height:80%;
+  }
+  .memory-card{
+    width:17%;
+  }
+
+  #memory-score{
+    width:50%;
+    height:50%;
+    line-height: 40px;
+    font-size:30px;
+  }
+  .memory-banner img{
+    width:auto;
+    height:100%;
+    margin-top:30px;
+  }
+  #time{
+    font-size:20px;
+  }
+  #bestRecord{
+    font-size:15px;
+    bottom:620px;
+    right:30px;
+  }
+  #restart{
+    width:80px;
+    height:40px;
+    font-size: 14px;
+    top:5px;
+    left:50px;
+  }
+  #nameButton{
+    width:80px;
+    height:35px;
+    font-size: 14px;
+    position:fixed;
+    top:5px;
+    right:40px;
+  }
+  #username{
+    width:120px;
+    height:40px;
+    font-size: 14px;
+    position:fixed;
+    top:05px;
+    right:120px;
+  }
+  #plusTime{
+    font-size:20px;
+    left:170px;
+    top:-528px;
+  }
+}
+/* memory card image style and size */
