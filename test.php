@@ -1,3 +1,7 @@
+<html>
+<body>
+  test
+</body>
 <?php
     //
     // // Only process POST reqeusts.
@@ -51,3 +55,4 @@
     echo "成功"
 
 ?>
+</html>
