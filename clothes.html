@@ -105,22 +105,16 @@
         <div class="container">
           <form name="contact" method="POST" netlify>
             <p>
-              <label>Your Name: <input type="text" name="name" /></label>
+              <label>姓名: <input type="text" name="name" /></label>
             </p>
             <p>
-              <label>Your Email: <input type="email" name="email" /></label>
+              <label>邮箱: <input type="email" name="email" /></label>
             </p>
             <p>
-              <label>Your Role: <select name="role[]" multiple>
-                <option value="leader">Leader</option>
-                <option value="follower">Follower</option>
-              </select></label>
+              <label>内容: <textarea name="message"></textarea></label>
             </p>
             <p>
-              <label>Message: <textarea name="message"></textarea></label>
-            </p>
-            <p>
-              <button type="submit">Send</button>
+              <button type="submit">发送</button>
             </p>
           </form>
         </div>
