@@ -103,10 +103,10 @@
 
       <section class="section fourth" id="contact-wrapper" data-anchor="contactAnchor">
         <div class="container">
-          <form id="contact-form" action="https://formspree.io/fborui@gmail.com" method="POST">
+          <form id="form" action="" >
             <div class="field">
-              <label for="name">姓名: </label>
-              <input type="text" id="name" name="name" required>
+              <label for="subject">主题: </label>
+              <input type="text" id="subject" name="subject" required>
             </div>
             <div class="field">
               <label for="email">邮箱: </label>
@@ -117,10 +117,10 @@
               <textarea type="message" id="message" name="message" required> </textarea>
             </div>
             <div class="field">
-              <button type="submit" name="submit">发送</button>
+              <button id="submit" name="submit">发送</button>
             </div>
           </form>
-          <div id="form-messages"></div>
+          <label id="info"></label>
         </div>
       </section><!-- Home Wrapper END -->
 
