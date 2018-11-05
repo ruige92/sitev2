@@ -103,10 +103,10 @@
 
       <section class="section fourth" id="contact-wrapper" data-anchor="contactAnchor">
         <div class="container">
-          <form id="form" action="" >
+          <form id="ajax-contact" method="post" action="mailer.php">
             <div class="field">
-              <label for="subject">主题: </label>
-              <input type="text" id="subject" name="subject" required>
+              <label for="name">姓名: </label>
+              <input type="text" id="name" name="name" required>
             </div>
             <div class="field">
               <label for="email">邮箱: </label>
@@ -114,13 +114,13 @@
             </div>
             <div class="field">
               <label for="message" >内容: </label>
-              <textarea type="message" id="message" name="message" required> </textarea>
+              <textarea id="message" name="message" required> </textarea>
             </div>
             <div class="field">
-              <button id="submit" name="submit">发送</button>
+              <button type="submit">发送</button>
             </div>
           </form>
-          <label id="info"></label>
+        <div id="form-messages"></div>
         </div>
       </section><!-- Home Wrapper END -->
 

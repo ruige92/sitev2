@@ -172,59 +172,49 @@ const siteScrolling=()=>{
 
 
 const contactPage=()=>{
+      // Get the form.
+      var form = $('#ajax-contact');
 
-    var form = $('#form'),
-        email = $('#email'),
-        subject = $('#subject'),
-        message = $('#message'),
-        info = $('#info'),
-        submit = $("#submit");
+      // Get the messages div.
+      var formMessages = $('#form-messages');
 
-    form.on('input', '#email, #subject, #message', function() {
-      $(this).css('border-color', '');
-      info.html('').slideUp();
-    });
+      // Set up an event listener for the contact form.
+      $(form).submit(function(event) {
+          // Stop the browser from submitting the form.
+          event.preventDefault();
 
-    submit.on('click', function(e) {
-      e.preventDefault();
-      if(validate()) {
-        $.ajax({
-          type: "POST",
-          url: "mailer.php",
-          data: form.serialize(),
-          dataType: "json"
-        }).done(function(data) {
-          if(data.success) {
-            email.val('');
-            subject.val('');
-            message.val('');
-            info.html('Message sent!').css('color', 'green').slideDown();
-          } else {
-            info.html('Could not send mail! Sorry!').css('color', 'red').slideDown();
-          }
-        });
-      }
-    });
+          // Serialize the form data.
+          var formData = $(form).serialize();
+          // Submit the form using AJAX.
+          $.ajax({
+              type: 'POST',
+              url: $(form).attr('action'),
+              data: formData
+          }).done(function(response) {
+              // Make sure that the formMessages div has the 'success' class.
+              $(formMessages).removeClass('error');
+              $(formMessages).addClass('success');
 
-    function validate() {
-      var valid = true;
-      var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+              // Set the message text.
+              $(formMessages).text(response);
 
-      if(!regex.test(email.val())) {
-        email.css('border-color', 'red');
-        valid = false;
-      }
-      if($.trim(subject.val()) === "") {
-        subject.css('border-color', 'red');
-        valid = false;
-      }
-      if($.trim(message.val()) === "") {
-        message.css('border-color', 'red');
-        valid = false;
-      }
+              // Clear the form.
+              $('#name').val('');
+              $('#email').val('');
+              $('#message').val('');
+          }).fail(function(data) {
+              // Make sure that the formMessages div has the 'error' class.
+              $(formMessages).removeClass('success');
+              $(formMessages).addClass('error');
 
-      return valid;
-    }
+              // Set the message text.
+              if (data.responseText !== '') {
+                  $(formMessages).text(data.responseText);
+              } else {
+                  $(formMessages).text('Oops! An error occured and your message could not be sent.');
+              }
+          });
+      });
 };
 
 const main =()=>{
