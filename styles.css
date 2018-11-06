@@ -994,7 +994,7 @@ body{font-family: 'Open Sans', sans-serif;}
     justify-content:center;
     align-items: center;
     border-radius: 100%;
-    z-index:12;
+    z-index:16;
   }
   .mobileNav img{
     width:60%;
@@ -1027,7 +1027,7 @@ body{font-family: 'Open Sans', sans-serif;}
     display:none;
     position:fixed;
     background:#fff;
-    z-index:11;
+    z-index:15;
     /* margin-top:-50px; */
   }
   .mobile-container h1{
@@ -1181,5 +1181,88 @@ body{font-family: 'Open Sans', sans-serif;}
     top:190px;
     /* right:100px; */
     /* bottom:400px; */
+  }
+  /* SKILLS SECTION */
+  .skills > .story{
+    height:70%;
+    width:75%;
+    margin:0 auto;
+    /* font-family: 'PT Sans', sans-serif; */
+    letter-spacing: -2px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #skill-intro{
+    display:flex;
+    height:1200px;
+    width:1000px;
+    /* background:red; */
+    margin:0 auto;
+    margin-top:200px;
+  }
+  .skill-head{
+    margin-left:150px;
+    width:500px;
+    height:100px;
+    line-height:100px;
+    z-index:4;
+    cursor: pointer;
+    text-align: center;
+    /* background:blue; */
+  }
+  .des{
+    margin-top:350px;
+  }
+  .pro{
+    margin-top:700px;
+  }
+  .wip{
+    margin-top:1050px;
+  }
+  .skill-content{
+    /* background:pink; */
+    display:none;
+  }
+  .mobile-skills{
+    width:800px;
+    height:200px;
+    /* background:green; */
+    z-index:12;
+    margin-top:80px;
+  }
+  .m-tech-skills ul,.m-des-skills ul,.m-pro-skills ul,.m-wip-skills ul{
+    list-style:none;
+    font-family:'Open Sans';
+    font-weight:500;
+    font-size:2.5rem;
+    color:#555;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    border:1px solid #ccc;
+  }
+  .m-tech-skills li,.m-des-skills li,.m-pro-skills li,.m-wip-skills li{
+    width:250px;
+    border-bottom:1px solid #555;
+  }
+  .m-des-skills ul{
+    margin-top:190px;
+  }
+  .m-pro-skills ul{
+    margin-top:180px;
+  }
+  .m-wip-skills ul{
+    margin-top:180px;
+  }
+  .skills > .story h1{
+    font-size:4rem;
+  }
+  .skill-vid{
+    display:none;
+  }
+  .skillExpand{
+    display:none;
   }
 }
