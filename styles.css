@@ -1167,12 +1167,19 @@ body{font-family: 'Open Sans', sans-serif;}
     word-wrap:break-word;
   }
   #p3{
+    position: absolute;
     font-size:2rem;
     margin-top:200px;
     width:250px;
+    right:100px;
+    z-index:8;
   }
   #p3line{
+    position:relative;
     width:250px;
-    margin-top:-80px;
+    right:-500px;
+    top:130px;
+    /* right:100px; */
+    /* bottom:400px; */
   }
 }
