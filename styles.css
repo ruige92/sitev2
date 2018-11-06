@@ -1051,33 +1051,14 @@ body{font-family: 'Open Sans', sans-serif;}
     color:#000;
   }
   .mainNav{
-    /* font-family: 'Amiri';
-    height:80px; */
     display:none;
   }
-  /* .mainNav nav{
-    margin-top:15px;
-    margin-left:-30px;
-  }
-  .mainNav nav h1{
-    font-weight:500;
-    width:140px;
-    font-size:2rem;
-  }
-  .mainNav img{
-    width:40px;
-    height:auto;
-    margin-top:5px;
-  }
-  .tinylogo img{
-    display:none;
-  } */
 
   .grid-1 h1, .grid-2 h1, .grid-3 h1, .grid-4 h1{
     font-size:3rem;
   }
   .logo{
-    margin-top:-100px;
+    margin-top:-50px;
   }
   .logo h1{
     font-size:10rem;
@@ -1089,11 +1070,18 @@ body{font-family: 'Open Sans', sans-serif;}
     margin-left: 20px;
   }
   .grid-parent{
+    height:100%;
     display:grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     /* background:red; */
     justify-content: center;
     align-items: center;
+  }
+  .overlay{
+    /* margin-top:-50px; */
+  }
+  .overlay img{
+    width:60%;
   }
   .grid-1,.grid-2,.grid-3,.grid-4{
     height:150px;
@@ -1106,19 +1094,20 @@ body{font-family: 'Open Sans', sans-serif;}
     margin-top:-50px;
   }
   .grid-2{
-    margin-top:-300px;
+    margin-top:-350px;
   }
   .grid-3{
-    margin-top:200px;
+    margin-top:350px;
   }
   .grid-1 h1,  .grid-2 h1,  .grid-3 h1,  .grid-4 h1{
     font-family:'Open Sans';
     font-weight:500;
     position:absolute;
     font-size: 4rem;
-    /* text-align: left; */
     margin:0;
     padding:0;
+    top:20%;
+    height:100px;
     margin-left:-200px;
     width:400px;
     cursor: pointer;
@@ -1131,6 +1120,17 @@ body{font-family: 'Open Sans', sans-serif;}
     height:80%;
     /* background:red; */
     display:block;
+  }
+  .about > .story{
+    height:80%;
+    width:75%;
+    margin:0 auto;
+    font-family: 'PT Sans', sans-serif;
+    letter-spacing: -2px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* background:red; */
   }
   #left-sec{
     height:70%;
@@ -1169,7 +1169,7 @@ body{font-family: 'Open Sans', sans-serif;}
   #p3{
     position: absolute;
     font-size:2rem;
-    margin-top:200px;
+    margin-top:220px;
     width:250px;
     right:100px;
     z-index:8;
@@ -1178,7 +1178,7 @@ body{font-family: 'Open Sans', sans-serif;}
     position:relative;
     width:250px;
     right:-500px;
-    top:130px;
+    top:190px;
     /* right:100px; */
     /* bottom:400px; */
   }
