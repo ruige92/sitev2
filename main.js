@@ -139,11 +139,20 @@ const mobileNavControl=()=>{
     $('#mobileNavClose').fadeIn();
     $('#mobileNavOpen').fadeOut();
     $('.mobile-container').fadeIn();
+    // $('.mobile-container').css({display:'block'});
+    // $('.mobile-container').attr('data-aos','fade-right');
   })
   $('#mobileNavClose').on('click',function(){
     $('#mobileNavClose').fadeOut();
     $('#mobileNavOpen').fadeIn();
     $('.mobile-container').fadeOut();
+  })
+  $('.mobile-container').children().on('click',function(){
+    $('#mobileNavClose').fadeOut();
+    $('#mobileNavOpen').fadeIn();
+    $('.mobile-container').fadeOut();
+  }).on('mouseleave',function(){
+    $('.imgs').removeClass('moveMid')
   })
 }
 //
