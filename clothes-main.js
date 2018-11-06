@@ -151,6 +151,10 @@ const siteScrolling=()=>{
         $('#contactBtn').addClass('turnGold');
         $('#contactBtn').parent().removeClass('animated bounce delay-06s');
         $('#contactBtn').parent().addClass('stayUp');
+        //
+        $isAnimatedFourth.addClass('animated fadeInUp');
+        $isAnimatedFourth.eq(0).css('animation-delay', '.3s');
+        $isAnimatedFourth.eq(1).css('animation-delay', '.3s');
       }
       if(index.index === 3){
         $('#contactBtn').parent().removeClass('stayUp');
@@ -160,6 +164,7 @@ const siteScrolling=()=>{
         $isAnimatedSecond.eq(1).css('animation-delay', '.6s');
         $isAnimatedSecond.eq(2).css('animation-delay', '.9s');
         $isAnimatedSlide1.removeClass('opacityZero');
+
       }
 
       console.log('index:', index.index, 'nextIndex:', nextIndex.index, 'direction:', direction);
