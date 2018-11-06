@@ -987,7 +987,7 @@ body{font-family: 'Open Sans', sans-serif;}
   and (-webkit-min-device-pixel-ratio: 2){
 
   .about,.skills,.exp,.contact{
-    height:100%;
+    height:100vh;
   }
   .mobileNav{
     width:100px;
