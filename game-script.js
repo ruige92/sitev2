@@ -54,6 +54,7 @@ function initGame(){
   //
   cards.forEach(card=>card.classList.remove('flip'));
   cards.forEach(card=>card.addEventListener('click',flipCard));
+  cards.forEach(card=>card.style.pointerEvents = "auto");
   //
   (function shuffle(){
     cards.forEach(card =>{
@@ -162,6 +163,8 @@ function disableCards(){
   successSound();
   firstCard.removeEventListener('click',flipCard);
   secondCard.removeEventListener('click',flipCard);
+  firstCard.style.pointerEvents = "none";
+  secondCard.style.pointerEvents = "none";
   //call resetBoard
   resetBoard();
   matched +=1;
