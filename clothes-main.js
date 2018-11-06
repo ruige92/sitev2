@@ -164,7 +164,7 @@ const siteScrolling=()=>{
         $isAnimatedSecond.eq(1).css('animation-delay', '.6s');
         $isAnimatedSecond.eq(2).css('animation-delay', '.9s');
         $isAnimatedSlide1.removeClass('opacityZero');
-
+        $isAnimatedFourth.removeClass('animated fadeInUp');
       }
 
       console.log('index:', index.index, 'nextIndex:', nextIndex.index, 'direction:', direction);
