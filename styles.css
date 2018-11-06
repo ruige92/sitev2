@@ -1078,10 +1078,10 @@ body{font-family: 'Open Sans', sans-serif;}
     align-items: center;
   }
   .overlay{
-    margin-top:-80px;
+    margin-top:-50px;
   }
   .overlay img{
-    width:60%;
+    width:50%;
   }
   .grid-1,.grid-2,.grid-3,.grid-4{
     height:150px;
