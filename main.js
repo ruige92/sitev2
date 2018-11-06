@@ -133,6 +133,19 @@ const selectContact=()=>{
     }).animate('shake')
   })
 }
+
+const mobileNavControl=()=>{
+  $('#mobileNavOpen').on('click',function(){
+    $('#mobileNavClose').fadeIn();
+    $('#mobileNavOpen').fadeOut();
+    $('.mobile-container').fadeIn();
+  })
+  $('#mobileNavClose').on('click',function(){
+    $('#mobileNavClose').fadeOut();
+    $('#mobileNavOpen').fadeIn();
+    $('.mobile-container').fadeOut();
+  })
+}
 //
 // var scene = document.getElementById('midArea');
 // var parallaxInstance = new Parallax(scene);
@@ -207,6 +220,7 @@ const main =()=>{
     $("html, body").animate({ scrollTop: 0 }, "slow");
   })
 
+  mobileNavControl();
   scrollDisplay();
   skillSelect();
   expSelect();

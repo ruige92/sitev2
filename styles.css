@@ -1017,3 +1017,147 @@ body{font-family: 'Open Sans', sans-serif;}
     margin-left:-250px;
   }
 }
+@media only screen and (min-width: 480px){
+  .mobileNav{
+    width:100px;
+    height:100px;
+    /* background:red; */
+    position:fixed;
+    right:0;
+    margin:30px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    border-radius: 100%;
+    z-index:12;
+  }
+  .mobileNav img{
+    width:60%;
+  }
+  #mobileNavOpen{
+    width:100px;
+    height:50px;
+    position:absolute;
+    display:flex;
+    align-content: center;
+    justify-content:center;
+    /* display:none; */
+  }
+  #mobileNavClose{
+    width:150px;
+    height:100px;
+    margin-left:25px;
+    position:absolute;
+    display:flex;
+    align-content: center;
+    justify-content:center;
+    display:none;
+  }
+  .mobile-container{
+    width:100%;
+    height:100vh;
+    display:grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    display:none;
+    position:fixed;
+    background:#fff;
+    z-index:11;
+  }
+  .mobile-container h1{
+    padding:0 25px;
+  }
+  .mobile-menu1,.mobile-menu2,.mobile-menu3,.mobile-menu4{
+    border:1px solid #ccc;
+    font-size:6rem;
+  }
+  .mobile-container h1:hover{
+    color:#555;
+    transition:1s ease;
+  }
+  .mobile-container a{
+    text-decoration: none;
+    color:#000;
+  }
+  .mainNav{
+    /* font-family: 'Amiri';
+    height:80px; */
+    display:none;
+  }
+  /* .mainNav nav{
+    margin-top:15px;
+    margin-left:-30px;
+  }
+  .mainNav nav h1{
+    font-weight:500;
+    width:140px;
+    font-size:2rem;
+  }
+  .mainNav img{
+    width:40px;
+    height:auto;
+    margin-top:5px;
+  }
+  .tinylogo img{
+    display:none;
+  } */
+
+  .grid-1 h1, .grid-2 h1, .grid-3 h1, .grid-4 h1{
+    font-size:2rem;
+  }
+  .logo h1{
+
+  }
+  .logo h4{
+    font-size:2rem;
+    margin-left: 20px;
+  }
+  .about-container{
+    height:80%;
+    /* background:red; */
+    display:block;
+  }
+  #left-sec{
+    height:70%;
+    width:100%;
+    /* background:pink; */
+    display:flex;
+    justify-content:space-between;
+    margin:0;
+    margin-top:150px;
+    padding:0;
+  }
+  #right-sec{
+    display:inline;
+    margin-left:400px;
+
+  }
+  #lucian-b{
+    width:800px;
+    height:auto;
+    margin-top:-150px;
+    display:none;
+  }
+  #p1{
+    font-size:4rem;
+  }
+  #p1h{
+    font-size:8rem;
+  }
+  #p2{
+    font-family:'Open Sans';
+    font-weight:100;
+    font-size:3rem;
+    text-align:left;
+    word-wrap:break-word;
+  }
+  #p3{
+    font-size:2rem;
+    margin-top:200px;
+    width:250px;
+  }
+  #p3line{
+    width:250px;
+    margin-top:-80px;
+  }
+}
