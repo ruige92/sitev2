@@ -988,6 +988,7 @@ body{font-family: 'Open Sans', sans-serif;}
 
   .about,.skills,.exp,.contact{
     height:100vh;
+    border-bottom: 0px;
   }
   .mobileNav{
     width:100px;
@@ -1285,7 +1286,7 @@ body{font-family: 'Open Sans', sans-serif;}
     display:flex;
     justify-content: center;
     align-items: center;
-    margin-top:200px;
+    margin-top:240px;
   }
   #exp-container{
   }
