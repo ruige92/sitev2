@@ -986,6 +986,9 @@ body{font-family: 'Open Sans', sans-serif;}
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2){
 
+  .about,.skills,.exp,.contact{
+    height:100%;
+  }
   .mobileNav{
     width:100px;
     height:100px;
@@ -1251,6 +1254,9 @@ body{font-family: 'Open Sans', sans-serif;}
     width:250px;
     border-bottom:1px solid #555;
   }
+  .m-tech-skills ul{
+    margin-top:30px;
+  }
   .m-des-skills ul{
     margin-top:190px;
   }
@@ -1271,7 +1277,7 @@ body{font-family: 'Open Sans', sans-serif;}
   }
   /* EXP Section */
   .exp > .story{
-    height:80%;
+    height:70%;
     width:75%;
     margin:0 auto;
     /* background:red; */
@@ -1365,7 +1371,7 @@ body{font-family: 'Open Sans', sans-serif;}
   }
   .contact-last{
     position:relative;
-    bottom:800px;
+    bottom:900px;
     /* background:red; */
     width:800px;
   }
