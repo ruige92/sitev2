@@ -43,7 +43,7 @@ const siteScrolling=()=>{
 
   // initialize fullPage
   $('#fullpage').fullpage({
-
+    lazyLoading: true,
     afterSlideLoad: function( section, origin, destination, direction){
       let totalItems = $('.third').find('.fp-slides').find('.fp-slidesContainer').children().length;
       let currentSlideIndex = 0;
