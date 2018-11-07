@@ -998,6 +998,9 @@ body{font-family: 'Open Sans', sans-serif;}
     min-height:100vh;
     border-bottom: 0px;
   }
+  .mid1,.mid2,.mid3,.mid4{
+    display:none;
+  }
   .mobileNav{
     width:100px;
     height:100px;
@@ -1247,17 +1250,17 @@ body{font-family: 'Open Sans', sans-serif;}
     z-index:4;
     cursor: pointer;
     text-align: center;
-    margin-top:-20px;
+    margin-top:-60px;
     /* background:blue; */
   }
   .des{
-    margin-top:350px;
+    margin-top:310px;
   }
   .pro{
-    margin-top:700px;
+    margin-top:660px;
   }
   .wip{
-    margin-top:1050px;
+    margin-top:1020px;
   }
   .skill-content{
     /* background:pink; */
@@ -1268,7 +1271,7 @@ body{font-family: 'Open Sans', sans-serif;}
     height:200px;
     /* background:green; */
     z-index:12;
-    margin-top:70px;
+    margin-top:20px;
   }
   .m-tech-skills,.m-des-skills,.m-pro-skills,.m-wip-skills{
     display:inline;
@@ -1282,7 +1285,7 @@ body{font-family: 'Open Sans', sans-serif;}
     width:320px;
     z-index:11;
     line-height: 40px;
-    margin-top:30px;
+    margin-top:40px;
     margin-left:-100px;
     display:block;
   }
