@@ -41,6 +41,7 @@ body{font-family: 'Open Sans', sans-serif;}
   pointer-events: none;
   z-index:3;
   letter-spacing: -.5px;
+  margin-top:-200px;
 }
 
 .logo h4{
@@ -48,6 +49,7 @@ body{font-family: 'Open Sans', sans-serif;}
   z-index:3;
   pointer-events: none;
   color:#a1a1a1;
+  margin-top:-50px;
 }
 @keyframes slideIn2 {
     0% {
@@ -170,6 +172,8 @@ body{font-family: 'Open Sans', sans-serif;}
   transition: opacity 400ms ease 0s, transform 200ms cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
   pointer-events: none;
   z-index: 10;
+  margin-top:-50px;
+  margin-left:5px;
 }
 
 @keyframes lGone {
@@ -386,6 +390,7 @@ body{font-family: 'Open Sans', sans-serif;}
 
 
 .skills > .story{
+  height:100%;
   width:75%;
   margin:0 auto;
   font-family: 'Amiri', sans-serif;
@@ -402,6 +407,9 @@ body{font-family: 'Open Sans', sans-serif;}
   display:grid;
   grid-template-rows: 1fr 1fr 1fr;
   margin-left:0px;
+}
+.m-tech-skills,.m-des-skills,.m-pro-skills,.m-wip-skills{
+  display:none;
 }
 .skill-arrows{
   position: absolute;
@@ -494,7 +502,7 @@ body{font-family: 'Open Sans', sans-serif;}
   z-index:5;
   line-height: 40px;
   position: absolute;
-  margin-top:-40px;
+  margin-top:-150px;
 }
 #skillExpand:hover,#skillClose:hover{
   transform: translateX(5%);
@@ -505,7 +513,7 @@ body{font-family: 'Open Sans', sans-serif;}
   width:60px;
   border-bottom: 1px solid #919191;
   height:1px;
-  margin-top:-35px;
+  margin-top:-145px;
   position: absolute;
 }
 .skill-imgs{
@@ -568,7 +576,7 @@ body{font-family: 'Open Sans', sans-serif;}
   width:500px;
   height:300px;
   cursor: pointer;
-  border-radius: 20%;
+  /* border-radius: 20%; */
   -webkit-transition: -webkit-transform 0.4s;
   -moz-transition: -moz-transform 0.4s;
   -o-transition: -o-transform 0.4s;
@@ -690,18 +698,18 @@ body{font-family: 'Open Sans', sans-serif;}
   transition: .2s ease;
   transition-delay: 0s;
 }
-.mobile-exp-content{
+.mobile-exp-content,#mobile-expNext,#mobile-expLine{
   display:none;
 }
-
 /* CONTACT PAGE */
 .contact{
+
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  height:700px;
+  height:100vh;
   width:100%;
 }
 
@@ -987,7 +995,7 @@ body{font-family: 'Open Sans', sans-serif;}
   and (-webkit-min-device-pixel-ratio: 2){
 
   .about,.skills,.exp,.contact{
-    height:100vh;
+    min-height:100vh;
     border-bottom: 0px;
   }
   .mobileNav{
@@ -1217,6 +1225,7 @@ body{font-family: 'Open Sans', sans-serif;}
     z-index:4;
     cursor: pointer;
     text-align: center;
+    margin-top:-20px;
     /* background:blue; */
   }
   .des{
@@ -1237,35 +1246,60 @@ body{font-family: 'Open Sans', sans-serif;}
     height:200px;
     /* background:green; */
     z-index:12;
-    margin-top:80px;
+    margin-top:70px;
+  }
+  .m-tech-skills,.m-des-skills,.m-pro-skills,.m-wip-skills{
+    display:inline;
+  }
+  #mobile-expNext{
+    font-family:'Amiri', serif;
+    font-size:2.5em;
+    letter-spacing: 1px;
+    height:40px;
+    cursor: pointer;
+    width:320px;
+    z-index:11;
+    line-height: 40px;
+    margin-top:50px;
+    display:block;
+  }
+  #mobile-expLine{
+    width:250px;
+    border-bottom: 1px solid #919191;
+    height:1px;
+    margin-top:-5px;
+    display:block;
   }
   .m-tech-skills ul,.m-des-skills ul,.m-pro-skills ul,.m-wip-skills ul{
     list-style:none;
     font-family:'Open Sans';
     font-weight:500;
     font-size:2.5rem;
-    color:#555;
+    color:#fff;
     display:flex;
     flex-wrap: wrap;
     justify-content: space-between;
     text-align: center;
-    border:1px solid #ccc;
+    background:#333;
+    height:200px;
+    padding:5px;
+    /* border:1px solid #fff; */
   }
   .m-tech-skills li,.m-des-skills li,.m-pro-skills li,.m-wip-skills li{
     width:250px;
-    border-bottom:1px solid #555;
+    border-bottom:1px solid #fff;
   }
   .m-tech-skills ul{
-    margin-top:30px;
+    margin-top:10px;
   }
   .m-des-skills ul{
-    margin-top:190px;
+    margin-top:160px;
   }
   .m-pro-skills ul{
-    margin-top:180px;
+    margin-top:140px;
   }
   .m-wip-skills ul{
-    margin-top:180px;
+    margin-top:150px;
   }
   .skills > .story h1{
     font-size:4rem;
@@ -1368,7 +1402,7 @@ body{font-family: 'Open Sans', sans-serif;}
   .contact{
     /* background:green; */
     width:100%;
-    height:100vh;
+    height:100%;
   }
   .contact-last{
     position:relative;
