@@ -1068,12 +1068,14 @@ body{font-family: 'Open Sans', sans-serif;}
   .mainNav{
     display:none;
   }
-
+  .home-wrapper{
+    display:none;
+  }
   .grid-1 h1, .grid-2 h1, .grid-3 h1, .grid-4 h1{
     font-size:3rem;
   }
   .logo{
-    margin-top:-100px;
+    margin-top:50px;
   }
   .logo h1{
     font-size:10rem;
@@ -1083,6 +1085,9 @@ body{font-family: 'Open Sans', sans-serif;}
     font-weight:300;
     font-size:2rem;
     margin-left: 20px;
+  }
+  .imgs{
+    margin-top:40px;
   }
   .grid-parent{
     height:100%;
