@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:100,100i,300,300i,400,400i,700,700i,900,900i');
 /* @import url(//fonts.googleapis.com/earlyaccess/notosansscsliced.css); */
 @import url('https://fonts.googleapis.com/css?family=Amiri');
-@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i');
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Archivo:400,400i,500,500i,600,600i,700,700i');
 
 *{
   padding:0;
   margin:0;
 }
 
-body{font-family: 'Open Sans', sans-serif;}
+body{font-family: 'Roboto', sans-serif;}
 
 .grid-parent{
   display: flex;
@@ -45,7 +45,7 @@ body{font-family: 'Open Sans', sans-serif;}
 }
 
 .logo h4{
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   z-index:3;
   pointer-events: none;
   color:#a1a1a1;
@@ -135,23 +135,6 @@ body{font-family: 'Open Sans', sans-serif;}
 .dropitDown{
   transform: translateY(0%);
   transition: transform 200ms cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
-}
-
-#close{
-  position: absolute;
-  font-family: 'Open Sans', sans-serif;
-  color: #a1a1a1;
-  width:40px;
-  height:40px;
-  text-align: center;
-  line-height: 40px;
-  cursor: pointer;
-}
-#close:hover{
-  transform: scale(1.2);
-  transition: transform 500ms ease 0s;
-  color:#000000;
-  font-weight: bold;
 }
 
 .highlight{
@@ -302,7 +285,7 @@ body{font-family: 'Open Sans', sans-serif;}
 .about > .story{
   width:75%;
   margin:0 auto;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   letter-spacing: -2px;
   display:flex;
   justify-content: center;
@@ -393,7 +376,7 @@ body{font-family: 'Open Sans', sans-serif;}
   height:100%;
   width:75%;
   margin:0 auto;
-  font-family: 'Amiri', sans-serif;
+  font-family: 'Roboto', sans-serif;
   letter-spacing: -2px;
   display:flex;
   justify-content: center;
@@ -475,7 +458,7 @@ body{font-family: 'Open Sans', sans-serif;}
 .content3{grid-column:2;grid-row:4;}
 
 .tech-content,.des-content,.wip-content,.pro-content{
-  font-family:'PT Sans', sans-serif;
+  font-family:'Roboto', sans-serif;
   letter-spacing: .2px;
   margin:5px 5px;
 }
@@ -487,12 +470,18 @@ body{font-family: 'Open Sans', sans-serif;}
   color:#ffffff;
   text-align: center;
   font-size:1.2rem;
-  line-height: 35px;
+  line-height: 40px;
 }
 .tech-content{background: #6b9ef4;  }
 .des-content{background: #f9d647; }
 .pro-content{background: #76b852;  }
 .wip-content{background: #EB3349;  }
+.skillExpand p{
+  font-family: "Amiri";
+}
+#mobile-skillNext,#mobile-skillLine{
+  display:none;
+}
 #skillExpand,#skillClose{
   font-size:1.2em;
   letter-spacing: 1px;
@@ -539,7 +528,7 @@ body{font-family: 'Open Sans', sans-serif;}
 .exp > .story{
   width:75%;
   margin:0 auto;
-  font-family:'Open Sans', sans-serif;
+  font-family:'Roboto', sans-serif;
   letter-spacing: 0px;
   display:flex;
   justify-content: center;
@@ -755,7 +744,7 @@ body{font-family: 'Open Sans', sans-serif;}
 }
 .contact-last p{
   font-size:1.5em;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight:100;
   margin:5px;
   color:#919191;
@@ -1049,7 +1038,7 @@ body{font-family: 'Open Sans', sans-serif;}
     /* margin-top:-50px; */
   }
   .mobile-container h1{
-    font-family:'Open Sans';
+    font-family:'Roboto';
     text-align: center;
     font-weight:500;
     padding:0 25px;
@@ -1072,22 +1061,36 @@ body{font-family: 'Open Sans', sans-serif;}
     display:none;
   }
   .home-wrapper{
-    /* display:none; */
+    display:none;
   }
   .mobile-wrapper{
     height:100vh;
     width:100%;
     background: url('./img/mobile-b4.jpg') no-repeat center center fixed;
     background-size: cover;
-    display:none;
+    /* display:none; */
   }
   .mobile-wrapper h1{
-    color:#fff;
+    color:#000;
     font-size:200;
   }
   .mobile-wrapper h4{
-    color:#fff;
+    color:#333;
   }
+  .mobile-menu{
+    position:absolute;
+    bottom:20px;
+    width:100%;
+  }
+  .mobile-menu ul{
+    list-style-type: none;
+    display:flex;
+    justify-content: center;
+  }
+  .mobile-menu li{
+    margin:0 40px;
+  }
+  .mobile-menu a{text-decoration: none;color:#000;font-size:2.5rem;font-weight:500;}
   /* .mobile-wrapper img{
     height:100vh;
   } */
@@ -1140,7 +1143,7 @@ body{font-family: 'Open Sans', sans-serif;}
     margin-top:350px;
   }
   .grid-1 h1,  .grid-2 h1,  .grid-3 h1,  .grid-4 h1{
-    font-family:'Open Sans';
+    font-family:'Roboto';
     font-weight:500;
     position:absolute;
     font-size: 4rem;
@@ -1165,7 +1168,7 @@ body{font-family: 'Open Sans', sans-serif;}
     height:80%;
     width:75%;
     margin:0 auto;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     letter-spacing: -2px;
     display:flex;
     justify-content: center;
@@ -1200,7 +1203,7 @@ body{font-family: 'Open Sans', sans-serif;}
     font-size:8rem;
   }
   #p2{
-    font-family:'Open Sans';
+    font-family:'Roboto';
     font-weight:100;
     font-size:3rem;
     text-align:left;
@@ -1251,6 +1254,7 @@ body{font-family: 'Open Sans', sans-serif;}
     cursor: pointer;
     text-align: center;
     margin-top:-60px;
+    font-family:'Amiri';
     /* background:blue; */
   }
   .des{
@@ -1305,8 +1309,8 @@ body{font-family: 'Open Sans', sans-serif;}
   }
   .m-tech-skills ul,.m-des-skills ul,.m-pro-skills ul,.m-wip-skills ul{
     list-style:none;
-    font-family:'Open Sans';
-    font-weight:500;
+    font-family:'Roboto';
+    font-weight:300;
     font-size:2.5rem;
     color:#fff;
     display:flex;
