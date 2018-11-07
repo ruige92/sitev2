@@ -1253,7 +1253,7 @@ body{font-family: 'Roboto', sans-serif;}
   #skill-intro{
     display:flex;
     height:1200px;
-    width:1000px;
+    width:800px;
     /* background:red; */
     margin:0 auto;
     margin-top:200px;
@@ -1266,18 +1266,18 @@ body{font-family: 'Roboto', sans-serif;}
     z-index:4;
     cursor: pointer;
     text-align: center;
-    margin-top:-60px;
+    margin-top:-100px;
     font-family:'Amiri';
     /* background:blue; */
   }
   .des{
-    margin-top:310px;
+    margin-top:240px;
   }
   .pro{
-    margin-top:660px;
+    margin-top:580px;
   }
   .wip{
-    margin-top:1020px;
+    margin-top:920px;
   }
   .skill-content{
     /* background:pink; */
@@ -1285,10 +1285,10 @@ body{font-family: 'Roboto', sans-serif;}
   }
   .mobile-skills{
     width:800px;
-    height:200px;
+    height:1200px;
     /* background:green; */
     z-index:12;
-    margin-top:20px;
+    margin-top:-50px;
   }
   .m-tech-skills,.m-des-skills,.m-pro-skills,.m-wip-skills{
     display:inline;
@@ -1341,11 +1341,13 @@ body{font-family: 'Roboto', sans-serif;}
     color:#fff;
     display:flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     text-align: center;
     background:#000;
     height:200px;
     padding:5px;
+    /* margin-top:-50px; */
+
     /* border:1px solid #fff; */
   }
   .m-tech-skills li,.m-des-skills li,.m-pro-skills li,.m-wip-skills li{
@@ -1353,16 +1355,16 @@ body{font-family: 'Roboto', sans-serif;}
     /* border-bottom:1px solid #333; */
   }
   .m-tech-skills ul{
-    margin-top:10px;
+    margin-top:40px;
   }
   .m-des-skills ul{
-    margin-top:160px;
+    margin-top:130px;
   }
   .m-pro-skills ul{
-    margin-top:140px;
+    margin-top:130px;
   }
   .m-wip-skills ul{
-    margin-top:150px;
+    margin-top:130px;
   }
   .skills > .story h1{
     font-size:4rem;
