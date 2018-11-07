@@ -2,7 +2,7 @@
 /* @import url(//fonts.googleapis.com/earlyaccess/notosansscsliced.css); */
 @import url('https://fonts.googleapis.com/css?family=Amiri');
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
-@import url('https://fonts.googleapis.com/css?family=Archivo:400,400i,500,500i,600,600i,700,700i');
+/* @import url('https://fonts.googleapis.com/css?family=Archivo:400,400i,500,500i,600,600i,700,700i'); */
 
 *{
   padding:0;
@@ -23,6 +23,10 @@ body{font-family: 'Roboto', sans-serif;}
 .wrapper{
   height:100vh;
   z-index: -1;
+}
+
+.mobile-wrapper{
+  display:none;
 }
 
 .logo{
@@ -733,7 +737,7 @@ body{font-family: 'Roboto', sans-serif;}
 }
 .contact-last h1{
   font-family: 'Amiri', sans-serif;
-  font-size:1.5em;
+  font-size:2.5em;
   letter-spacing: 1px;
   margin:2px;
 }
@@ -1035,7 +1039,7 @@ body{font-family: 'Roboto', sans-serif;}
     position:fixed;
     background:#fff;
     z-index:15;
-    margin-top:150px;
+    /* margin-top:150px; */
   }
   .mobile-container h1{
     font-family:'Roboto';
@@ -1044,6 +1048,11 @@ body{font-family: 'Roboto', sans-serif;}
     padding:0 25px;
     /* background:blue; */
     height:230px;
+    margin-top:150px;
+    border-bottom:1px solid #ccc;
+  }
+  .mobile-menu4 h1{
+    border-bottom:0px;
   }
   .mobile-menu1,.mobile-menu2,.mobile-menu3,.mobile-menu4{
     /* border:1px solid #ccc; */
