@@ -1343,14 +1343,14 @@ body{font-family: 'Roboto', sans-serif;}
     flex-wrap: wrap;
     justify-content: space-between;
     text-align: center;
-    background:#333;
+    background:#000;
     height:200px;
     padding:5px;
     /* border:1px solid #fff; */
   }
   .m-tech-skills li,.m-des-skills li,.m-pro-skills li,.m-wip-skills li{
     width:250px;
-    border-bottom:1px solid #fff;
+    /* border-bottom:1px solid #333; */
   }
   .m-tech-skills ul{
     margin-top:10px;
