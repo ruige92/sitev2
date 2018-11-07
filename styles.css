@@ -1326,12 +1326,16 @@ body{font-family: 'Open Sans', sans-serif;}
   }
   .card{
     border-radius:0;
-    width:600px;
-    height:350px;
+    width:550px;
+    height:360px;
+  }
+  .card:hover{
+    box-shadow:none;
   }
   .card .front, .card .back{
-    width:600px;
-    height:380px;
+    width:550px;
+    height:360px;
+
   }
   .card .front{
     /* padding:0 3%; */
@@ -1339,6 +1343,9 @@ body{font-family: 'Open Sans', sans-serif;}
   }
   .card .back{
     padding:0;
+  }
+  .card-container{
+    grid-gap:0em;
   }
   .card-container:first-child .card .front {
     background: #fff;
@@ -1350,16 +1357,16 @@ body{font-family: 'Open Sans', sans-serif;}
     border:1px solid #ccc;
   }
   #ciscoImg{
-    width:280px;
-  }
-  #uokImg{
     width:250px;
   }
+  #uokImg{
+    width:220px;
+  }
   #riotImg{
-    width:300px;
+    width:280px;
   }
   #ggpImg{
-    width:200px;
+    width:180px;
   }
   .card .front h1{
     font-weight:600;
@@ -1387,7 +1394,7 @@ body{font-family: 'Open Sans', sans-serif;}
     display:inline;
   }
   .content{
-    margin-top:15px;
+    margin:5px 0px;
   }
   .expExpand{
     margin-top:-800px;
