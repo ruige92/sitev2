@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 /* @import url('https://fonts.googleapis.com/css?family=Archivo:400,400i,500,500i,600,600i,700,700i'); */
 
+
 *{
   padding:0;
   margin:0;
@@ -49,10 +50,12 @@ body{font-family: 'Roboto', sans-serif;}
 }
 
 .logo h4{
+  font-size:2em;
+  font-weight:200;
   font-family: 'Roboto', sans-serif;
   z-index:3;
   pointer-events: none;
-  color:#a1a1a1;
+  color:#ccc;
   margin-top:-50px;
 }
 @keyframes slideIn2 {
@@ -382,7 +385,7 @@ body{font-family: 'Roboto', sans-serif;}
   height:100%;
   width:75%;
   margin:0 auto;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Amiri', sans-serif;
   letter-spacing: -2px;
   display:flex;
   justify-content: center;
@@ -465,6 +468,7 @@ body{font-family: 'Roboto', sans-serif;}
 
 .tech-content,.des-content,.wip-content,.pro-content{
   font-family:'Roboto', sans-serif;
+  font-weight:300;
   letter-spacing: .2px;
   margin:5px 5px;
 }
