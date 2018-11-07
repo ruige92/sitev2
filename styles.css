@@ -1047,12 +1047,10 @@ body{font-family: 'Roboto', sans-serif;}
     font-weight:500;
     padding:0 25px;
     /* background:blue; */
-    height:230px;
-    margin-top:150px;
+    height:380px;
+    line-height:380px;
+    /* margin-top:150px; */
     border-bottom:1px solid #ccc;
-  }
-  .mobile-menu4 h1{
-    border-bottom:0px;
   }
   .mobile-menu1,.mobile-menu2,.mobile-menu3,.mobile-menu4{
     /* border:1px solid #ccc; */
@@ -1077,6 +1075,7 @@ body{font-family: 'Roboto', sans-serif;}
     width:100%;
     background: url('./img/mobile-b4.jpg') no-repeat center center fixed;
     background-size: cover;
+    display:block;
     /* display:none; */
   }
   .mobile-wrapper h1{
@@ -1303,9 +1302,6 @@ body{font-family: 'Roboto', sans-serif;}
     margin-left:-100px;
     display:block;
   }
-  #mobile-skillNext{
-    margin-left:10px;
-  }
   #mobile-expLine,#mobile-skillLine{
     width:80px;
     border-bottom: 1px solid #919191;
@@ -1314,8 +1310,17 @@ body{font-family: 'Roboto', sans-serif;}
     margin-left:-100px;
     display:block;
   }
+  #mobile-skillNext{
+    margin-left:10px;
+  }
   #mobile-skillLine{
     margin-left:10px;
+  }
+  #mobile-expNext{
+    margin-top:10px;
+  }
+  #mobile-expLine{
+    margin-top:0px;
   }
   .m-tech-skills ul,.m-des-skills ul,.m-pro-skills ul,.m-wip-skills ul{
     list-style:none;
@@ -1468,7 +1473,7 @@ body{font-family: 'Roboto', sans-serif;}
     font-size:4rem;
   }
   .contact-last h2{
-    font-size:4rem;
+    font-size:5rem;
   }
   .contact-last p{
     margin-top:50px;
@@ -1476,7 +1481,7 @@ body{font-family: 'Roboto', sans-serif;}
   }
   .contact-symbols{
     position:relative;
-    bottom:300px;
+    bottom:400px;
     left:-160px;
   }
   .icon{
