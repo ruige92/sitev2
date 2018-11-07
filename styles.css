@@ -1083,7 +1083,7 @@ body{font-family: 'Roboto', sans-serif;}
     width:100%;
   }
   .mobile-menu ul{
-    font-family: 'Amiri';
+    /* font-family: 'Amiri'; */
     list-style-type: none;
     display:flex;
     justify-content: center;
